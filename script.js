@@ -26,6 +26,13 @@ arr.forEach(button => {
             string = string.slice(0, -1);
             inputBox.value = string;
         } 
+        else if (button.classList.contains('operator') && button.querySelector('i')) {
+            // For operator buttons with icons
+            if (button.querySelector('i').classList.contains('ri-divide-line')) {
+                string += '÷';
+            }
+            inputBox.value = string;
+        } 
         else {
             string += btnValue;
             inputBox.value = string;
