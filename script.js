@@ -1,16 +1,34 @@
-let input = document.getElementById('inputBox');
+let inputBox = document.getElementById('inputBox');
 let buttons = document.querySelectorAll('button');
 
 let string = "";
-let arr =  Array.from(buttons);
+let arr = Array.from(buttons);
+
 arr.forEach(button => {
     button.addEventListener('click', (e) => {
-        if(e.target.innerHTML == '=') {
-            string = eval(string);
-            input.value = string;
+        let btnValue = button.innerText.trim();
 
+        if (button.classList.contains('ac-btn')) {
+            string = "";
+            inputBox.value = string;
+        } 
+        else if (button.classList.contains('equal-btn')) {
+            try {
+                string = string.replace(/×/g, '*').replace(/÷/g, '/');
+                inputBox.value = eval(string);
+                string = inputBox.value;
+            } catch {
+                inputBox.value = "Error";
+                string = "";
+            }
+        } 
+        else if (button.classList.contains('del-btn')) {
+            string = string.slice(0, -1);
+            inputBox.value = string;
+        } 
+        else {
+            string += btnValue;
+            inputBox.value = string;
         }
-        string += e.target.innerHTML;
-        input.value = string;
-    })
-})
+    });
+});
