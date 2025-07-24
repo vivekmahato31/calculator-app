@@ -5,37 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🖩 Calculator - by Vivek Mahato</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
 </head>
 <body>
   <div class="calculator">
-
-    <div class="top-bar">
-      <button class="mode-toggle"><i class="ri-moon-line"></i></button>
-      <button class="sci-toggle"><i class="ri-function-line"></i></button>
-      <button class="history-toggle"><i class="ri-history-line"></i></button>
-    </div>
-
     <div id="inputBox" class="inputBox" contenteditable="true" data-placeholder="0"></div>
-
-    <div class="sci-panel hidden">
-      <div class="sci-row">
-        <button class="func-btn">√</button>
-        <button class="func-btn">^</button>
-        <button class="func-btn">sin</button>
-        <button class="func-btn">cos</button>
-        <button class="func-btn">tan</button>
-      </div>
-    </div>
-
-    <div class="history-panel hidden" id="history"></div>
 
     <div class="buttons">
       <div>
         <button class="ac-btn">AC</button>
-        <button class="del-btn"><i class="ri-delete-back-2-line"></i></button>
+        <button class="del-btn">DEL</button>
         <button class="operator">%</button>
-        <button class="operator"><i class="ri-divide-line"></i></button>
+        <button class="operator">÷</button>
       </div>
 
       <div>
@@ -66,7 +46,6 @@
         <button class="equal-btn">=</button>
       </div>
     </div>
-
   </div>
 
   <script src="script.js"></script>
