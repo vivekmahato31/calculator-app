@@ -28,7 +28,11 @@ arr.forEach(button => {
       updateDisplay();
     }
     else if (button.classList.contains('operator')) {
-      string += btnValue;
+      if (button.querySelector('i') && button.querySelector('i').classList.contains('ri-divide-line')) {
+        string += '÷';
+      } else {
+        string += btnValue;
+      }
       updateDisplay();
     }
     else {
