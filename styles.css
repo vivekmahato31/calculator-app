@@ -44,7 +44,11 @@ body {
 .inputBox:empty::before {
   content: attr(data-placeholder);
   color: #ffffff;
-  opacity: 0.7;
+  opacity: 1;
+}
+
+.inputBox span.operator {
+  color: #6dee0a;
 }
 
 button {
@@ -60,11 +64,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background: rgba(255,255,255,0.1);
+.ac-btn {
+  color: #6dee0a;
 }
 
-.ac-btn, .operator {
+.operator {
   color: #6dee0a;
 }
 
@@ -74,5 +78,4 @@ button:hover {
 
 .equal-btn {
   background-color: #fb7c14;
-  color: white;
 }
